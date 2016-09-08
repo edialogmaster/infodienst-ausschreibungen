@@ -516,11 +516,140 @@
 		<div id="teaser" class="mt10">
 
   
-  
+	
+    <div id="h-slider">
+        <ul id="slideshow">
+            
+                
+                <li id="slide-0" class="active"
+                    data-frame="5">
+                <img src="download/DEgzeteaser85c6.jpg?filename=DE-gze-teaser" alt="" />
+                    <span class="text-container">
+                        <h2>Europas größte Ausschreibungs-Datenbank: 2 Mio. Bekanntmachungen pro Jahr - aus einer Hand!</h2>
+                        <span class="caption">
+                            <br/>
+                            
+                            Gerd Zemke, Datenmanagement DE
+                        </span>
+                    </span>
 
-	  
-        
-            <div id="reg-box">
+                </li>
+            
+                
+                <li id="slide-1" class=""
+                    data-frame="5">
+                <img src="download/teaser_de_dea601.png?filename=teaser_de_de" alt="" />
+                    <span class="text-container">
+                        <h2>Tägliche Zustellung Ihrer&nbsp;neuen Auftrags-Chancen: So sparen Sie Zeit und Kosten.</h2>
+                        <span class="caption">
+                            <br/>
+                            
+                            Cornelia Meya, Country Manager
+                        </span>
+                    </span>
+
+                </li>
+            
+                
+                <li id="slide-2" class=""
+                    data-frame="5">
+                <img src="download/DERefGreschkeWIKING5346.jpg?filename=DE-Ref-Greschke-WIKING" alt="" />
+                    <span class="text-container">
+                        <h2>"Anwenderfreundliches und übersichtliches Design zeichnen den Service aus."</h2>
+                        <span class="caption">
+                            <br/>
+                            
+                            Andy Greschke | Vertrieb & Marketing | WIKING Unternehmensgruppe | Sicherheit & Service
+                        </span>
+                    </span>
+
+                </li>
+            
+        </ul>
+
+        <ul class="teaser-tabs tabs">
+            
+                <li><a class="current"
+                       href="#slide-0">Größte Ausschreibungs-DB</a>
+                </li>
+            
+                <li><a class=""
+                       href="#slide-1">Täglich informiert</a>
+                </li>
+            
+                <li><a class=""
+                       href="#slide-2">Beste Betreuung</a>
+                </li>
+            
+        </ul>
+
+        <script type="text/javascript">
+
+			var timeOutIds = [];
+			var counter = 1;
+
+            window.onload = function () {
+                spin('slideshow', 400, 'li', $(this).attr('href'));
+            };
+
+            $('ul.teaser-tabs a')
+                    .click(function () {
+                        slideSwitch('slideshow', 400, 'li', $(this).attr('href'));
+                        stopOnTeaser(timeOutIds);
+                        timeOutIds = [];
+						counter = 0;
+                    })
+					.mouseout(function () {
+						if(counter == 0){
+							window.onload(function () {
+								spin('slideshow', 400, 'li', $(this).attr('href'));
+							});
+						}
+						counter++;
+					});
+
+            function slideSwitch(targetId, switchSpeed, targetTag, item) {
+                if (targetId == '') return false;
+                if (targetTag == '') targetTag = 'img';
+                var $active = $('#' + targetId + ' ' + targetTag + '.active');
+
+                if ($active.length == 0) $active = $('#' + targetId + ' ' + targetTag + ':last');
+
+                if (!item) var $next = $active.next(targetTag).length ? $active.next(targetTag) : $('#' + targetId + ' ' + targetTag + ':first');
+                else $next = $('#' + targetId + ' ' + targetTag + item);
+                $active.removeClass('active');
+                $active.addClass('last-active');
+                if (!$active.is($next)) {
+                    $next.css({opacity: 0.0})
+                            .addClass('active')
+                            .animate({opacity: 1.0}, switchSpeed, function () {
+                                $active.removeClass('active last-active');
+                            });
+                }
+                $('div#h-slider a').removeClass('current');
+                $('div#h-slider a[href="#' + $next.attr('id') + '"]').addClass('current');
+            }
+
+            function spin(targetId, switchSpeed, targetTag, item) {
+                var timeFrame = $('#slideshow').children('.active').data('frame') * 1000;
+                var tOutIds = [];
+
+                timeOutIds.push(setTimeout(function () {
+                    slideSwitch(targetId, switchSpeed, targetTag, item);
+                    timeOutIds.push(spin(targetId, switchSpeed, targetTag, item));
+                }, timeFrame));
+            }
+
+            function stopOnTeaser(timeouts) {
+                for (var i = 0; i < timeouts.length; i++) {
+                    clearTimeout(timeouts[i]);
+                }
+            }
+
+        </script>
+    </div>
+
+    <div id="reg-box">
 
                 
                     <div class="title">
@@ -685,176 +814,91 @@ required:"Bitte geben Sie Ihre E-Mail-Adresse an.",email:"Bitte geben Sie eine g
 }
 });});</script>
 
-        
-
-
-
-
-  
-
-  
-  
-	
-
-
-
-
-    <div id="h-slider">
-        <ul id="slideshow">
-            
-                
-                <li id="slide-0" class="active"
-                    data-frame="5">
-                <img src="download/DEgzeteaser85c6.jpg?filename=DE-gze-teaser" alt="" />
-                    <span class="text-container">
-                        <h2>Europas größte Ausschreibungs-Datenbank: 2 Mio. Bekanntmachungen pro Jahr - aus einer Hand!</h2>
-                        <span class="caption">
-                            <br/>
-                            
-                            Gerd Zemke, Datenmanagement DE
-                        </span>
-                    </span>
-
-                </li>
-            
-                
-                <li id="slide-1" class=""
-                    data-frame="5">
-                <img src="download/teaser_de_dea601.png?filename=teaser_de_de" alt="" />
-                    <span class="text-container">
-                        <h2>Tägliche Zustellung Ihrer&nbsp;neuen Auftrags-Chancen: So sparen Sie Zeit und Kosten.</h2>
-                        <span class="caption">
-                            <br/>
-                            
-                            Cornelia Meya, Country Manager
-                        </span>
-                    </span>
-
-                </li>
-            
-                
-                <li id="slide-2" class=""
-                    data-frame="5">
-                <img src="download/DERefGreschkeWIKING5346.jpg?filename=DE-Ref-Greschke-WIKING" alt="" />
-                    <span class="text-container">
-                        <h2>"Anwenderfreundliches und übersichtliches Design zeichnen den Service aus."</h2>
-                        <span class="caption">
-                            <br/>
-                            
-                            Andy Greschke | Vertrieb & Marketing | WIKING Unternehmensgruppe | Sicherheit & Service
-                        </span>
-                    </span>
-
-                </li>
-            
-        </ul>
-
-        <ul class="teaser-tabs tabs">
-            
-                <li><a class="current"
-                       href="#slide-0">Größte Ausschreibungs-DB</a>
-                </li>
-            
-                <li><a class=""
-                       href="#slide-1">Täglich informiert</a>
-                </li>
-            
-                <li><a class=""
-                       href="#slide-2">Beste Betreuung</a>
-                </li>
-            
-        </ul>
-
-        <script type="text/javascript">
-
-			var timeOutIds = [];
-			var counter = 1;
-
-            window.onload = function () {
-                spin('slideshow', 400, 'li', $(this).attr('href'));
-            };
-
-            $('ul.teaser-tabs a')
-                    .click(function () {
-                        slideSwitch('slideshow', 400, 'li', $(this).attr('href'));
-                        stopOnTeaser(timeOutIds);
-                        timeOutIds = [];
-						counter = 0;
-                    })
-					.mouseout(function () {
-						if(counter == 0){
-							window.onload(function () {
-								spin('slideshow', 400, 'li', $(this).attr('href'));
-							});
-						}
-						counter++;
-					});
-
-            function slideSwitch(targetId, switchSpeed, targetTag, item) {
-                if (targetId == '') return false;
-                if (targetTag == '') targetTag = 'img';
-                var $active = $('#' + targetId + ' ' + targetTag + '.active');
-
-                if ($active.length == 0) $active = $('#' + targetId + ' ' + targetTag + ':last');
-
-                if (!item) var $next = $active.next(targetTag).length ? $active.next(targetTag) : $('#' + targetId + ' ' + targetTag + ':first');
-                else $next = $('#' + targetId + ' ' + targetTag + item);
-                $active.removeClass('active');
-                $active.addClass('last-active');
-                if (!$active.is($next)) {
-                    $next.css({opacity: 0.0})
-                            .addClass('active')
-                            .animate({opacity: 1.0}, switchSpeed, function () {
-                                $active.removeClass('active last-active');
-                            });
-                }
-                $('div#h-slider a').removeClass('current');
-                $('div#h-slider a[href="#' + $next.attr('id') + '"]').addClass('current');
-            }
-
-            function spin(targetId, switchSpeed, targetTag, item) {
-                var timeFrame = $('#slideshow').children('.active').data('frame') * 1000;
-                var tOutIds = [];
-
-                timeOutIds.push(setTimeout(function () {
-                    slideSwitch(targetId, switchSpeed, targetTag, item);
-                    timeOutIds.push(spin(targetId, switchSpeed, targetTag, item));
-                }, timeFrame));
-            }
-
-            function stopOnTeaser(timeouts) {
-                for (var i = 0; i < timeouts.length; i++) {
-                    clearTimeout(timeouts[i]);
-                }
-            }
-
-        </script>
-    </div>
 
 
   
 </div>
 	
+	
+    <div class="column">
 		
 
-
-
-
-    
-
-    
-        
-
-
-
-
-
-    
-    
-        <div class="column">
-            
+		<div class="column-box" id="reg-box-mobile"><!-- Start of Registration Box Mobile -->
+			    <div class="reg-box-style" id="reg-box">
+                    <div class="title">
+                        <h3>14 Tage GRATIS TESTEN</h3>
+                    </div>
                 
-                    <div class="column-box">
+                <form action="http://test:ariadne@test.infodienst-ausschreibungen.de/wizardRegistration/firstPageReg" method="post" name="quickRegForm" id="quickRegForm" >
+                    <input type="hidden" name="fromQuickForm" value="true" id="fromQuickForm" />
+					<input type="hidden" name="registrationSource" value="HOME_PAGE" id="registrationSource" />
+
+                    
+                        <div class="text">
+                            <p>
+                                <span class="f25 b">602.319</span>
+                                aktuelle Auftrags-Chancen
+                            </p>
+                        </div>
+                    
+                    <fieldset>
+
+                        
+                            <div class="inputWrapper">
+  <div class="errorTip"></div>
+  
+  <select name="param.salutation" class="l2112select" id="param_salutation" >
+<option value="">--Anrede*--</option>
+<option value="2" >Frau</option>
+<option value="1" >Herr</option>
+</select>
+
+</div>
+
+                        
+                            <div class="inputWrapper">
+  <div class="errorTip"></div>
+  
+  <input type="text" id="param_first_name" name="param.first.name" value="" class="input-middle" maxlength="255" />
+
+</div>
+
+                        
+                            <div class="inputWrapper">
+  <div class="errorTip"></div>
+  
+  <input type="text" id="param_last_name" name="param.last.name" value="" class="input-middle" maxlength="255" />
+
+</div>
+
+                        
+                            <div class="inputWrapper">
+  <div class="errorTip"></div>
+  
+  <input type="text" id="param_birth_date" name="param.birth.date" value="" class="date-slider input-middle birth-date" maxlength="255" />
+
+</div>
+
+                        
+                            <div class="inputWrapper">
+  <div class="errorTip"></div>
+  
+  <input type="text" id="param_email" name="param.email" value="" class="input-middle" maxlength="255" />
+
+</div>
+
+                        
+                    </fieldset>
+
+                    <div class="secure">
+                        <input type="submit" name="register" value="Gratis testen" class="btn-red" id="register" />
+                    </div>
+                </form>
+            </div>
+
+		</div><!-- End of Registration Box Mobile -->
+
+            <div class="column-box">
 	<h3 class="overflow-visible">
 		Schnellsuche
 		<span class="icon-search"></span>

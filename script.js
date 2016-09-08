@@ -91,13 +91,6 @@ $(function(){
 		$(this).find("ul").toggle();
 	});
 
-	// -------------- Add Header-padding after clicking Login ------------------- //
-
-	$("#loginContainer .links").click(function() {
-		$(document).find("#header").css("margin-bottom", "55px");
-	});
-
-
 	// ------------------- Pages 12 - 14 ------------------------
 	
 	

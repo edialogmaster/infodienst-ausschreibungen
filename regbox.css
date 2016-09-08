@@ -242,4 +242,27 @@
     position:relative;
 }
 
+/*e-dialog customized*/
 
+/* Registration Box Mobile */
+
+#reg-box-mobile {
+    display: none;
+}
+
+@media only screen and (max-width : 860px) {
+
+    /*Registration Box*/
+    #reg-box-mobile {
+        display: block;
+    }
+
+    div#h-slider + #reg-box {
+        display: none;
+    }
+
+    #reg-box {
+        position: static;
+    }
+
+}
