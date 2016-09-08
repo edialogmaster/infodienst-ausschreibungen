@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* Global resets */
 
 html {
@@ -12,7 +13,6 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	background: #FFF url('../images/h-bg-w.png') no-repeat center 0;
 	color: #333;
 }
 body.body-orange{
@@ -568,6 +568,7 @@ table.t3 th div, table.t4 th div {
 #header {
 	height: 115px;
 	padding-top: 11px;
+	background: #FFF url('../images/h-bg-w.png') no-repeat center 0;	
 }
 #wrap {
 	margin-bottom: 15px;
@@ -716,13 +717,8 @@ table.t3 th div, table.t4 th div {
 
 /* -------------LOGIN CONTAINER---------------------- */
 #loginContainer {
-	float: right;
 	overflow: hidden;
 	text-align: left;
-	position: relative;
-	padding-right: 10px;
-	padding-top: 9px;
-	padding-left: 48px;
 }
 
 #loginContainer #login-area .text {
@@ -762,8 +758,7 @@ table.t3 th div, table.t4 th div {
 
 #loginContainer .links { /* + */
 	text-align: right;
-	margin-top: 40px;
-	margin-right: 35px;
+	margin-right: 40px;
 	min-width: 235px;
 }
 
@@ -896,6 +891,10 @@ table.t3 th div, table.t4 th div {
 	margin: 0px 10px 10px 0;
 }
 
+#slideshow img {
+	width: 100%;
+}
+
 
 
 .btn-green {
@@ -976,6 +975,8 @@ table.t3 th div, table.t4 th div {
 }
 
 /* - Header */
+
+
 
 /* + Footer */
 
@@ -5097,4 +5098,254 @@ body.loading .modal {
 
 .noMarginSelect {
     margin: 0px;
+}
+
+/* e-dialog customized */
+
+#nav-mobile {
+	clear: right;
+	display: none;
+	font-size: 16px;
+	margin-top: 35px;
+}
+
+#nav-mobile img {
+	width: 25px;
+	position: relative;
+	top: 7px;
+	padding-right: 5px;
+}
+
+#first-nav {
+	float: right;
+}
+
+#first-nav-mobile {
+	display: none;
+}
+
+#login-fp-title {
+	margin-top: 9px;
+}
+
+/*media queries*/
+
+@media only screen and (max-width : 1000px) {
+	.main {
+		width: 90%;
+	}
+
+	#header {
+		background-image: url('../images/h-bg-w-mobile.png');
+		background-position: right 0;
+	}
+
+	#header #main div {
+		display: inline-block;
+	}
+
+	#logo, #logo a {
+		position: static;
+	}
+
+	#logo {
+		width: 40%;
+		height: auto;
+		margin-top: 10px;
+	}
+
+	#logoContainer {
+		width: 70%;
+	}
+
+	#logo img {
+		width: 100%;
+	}
+
+	#main-menu {
+		width: 60%;
+	}
+
+	#main-menu ul li a {
+		padding: 2px 4px;
+	}
+
+}
+
+
+@media only screen and (max-width : 918px) {
+	#main-menu ul li {
+		font-size: 12px;
+	}
+}
+
+
+@media only screen and (max-width : 860px) {
+	/* gesamtbreite */
+	#main-menu {
+		width: 65%;
+	}
+
+	#header {
+		background-size: 100%;
+	}
+
+	/* logo */
+	#logo {
+		display: block;
+		width: 33%;
+	}
+
+	#logoContainer {
+		width: 100%;
+	}
+	
+
+	#language-logout-bar {
+		border: 0;
+	}
+
+	#main-menu ul#first-nav {
+		padding-top: 30px;
+	}
+
+	#main-menu ul#first-nav li a {
+		color: #333;
+	}
+
+}
+
+@media only screen and (max-width : 780px) {
+
+	#language-logout-bar div.dropdown{
+		display: none;
+	}
+
+	#nav-mobile {
+		display: block;
+	}
+
+	#first-nav {
+		display: none;
+	}
+
+	#first-nav-mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000000;
+	text-align: center;
+	padding-top: 0;
+	}
+
+
+	#main-menu ul#first-nav-mobile li {
+		line-height: 4em;
+		float: none;
+		background: rgba(216,10,10, 0.9);
+		/*rot: background: rgba(110,143,134, 0.9); */
+		border: 0;
+	}
+
+	#first-nav-mobile li:last-child {
+		padding-bottom: 1em;
+	}
+
+	#main-menu #first-nav-mobile li a {
+		color: white;
+		font-size: 1.5em;
+		display: block;
+	}
+
+	#nav-close {
+		text-align: right;
+	}
+
+	#nav-mobile img.icon {
+		width: 20px;
+		position: static;
+		padding: 0;
+	}
+
+	#first-nav-mobile li.language-handle {
+		background: #6e8f86;
+		font-size: 2em;
+	}
+
+	#first-nav-mobile li.language-divider {
+		padding: 0 3em;
+	}
+
+	.language-divider hr {
+		margin: 0;
+	}
+
+	/*Login Area*/
+	#login-area {
+		padding-left: 0;
+		width: 100%;
+		background-image: none;
+	}
+
+	#loginContainer #login-area .text, #loginContainer #login-area .submit, #loginContainer #login-area .submit-orange {
+		margin: 0 0 3px 3px;
+	}
+
+
+}
+
+
+
+
+@media only screen and (max-width : 620px) {
+	#logo { width: 40%; }
+	#main-menu { width: 60%; }
+
+	#loginContainer #login-area .submit, #loginContainer #login-area .submit-orange {
+		float: right;
+	}
+
+	#loginContainer #login-area .text {
+		width: 50%;
+	}
+}
+
+
+@media only screen and (max-width : 480px) {
+
+	.main {
+		width: 100%;
+	}
+
+	#logo {
+		width: 50%;
+		margin-left: 5%;
+	}
+
+	#main-menu { 
+		width: 40%;
+		margin-right: 5%; 
+	}
+
+	#nav-mobile {
+		margin-top: 30px;
+	}
+
+	#login-area {
+		padding-left: 10px;
+	}
+
+	#loginContainer #login-area .links, #loginContainer #login-area .submit {
+		margin-right: 20px;
+	}
+
+	#loginContainer #login-area #submit_fp_email {
+		float: left;
+	}
+
+
+
+
 }
