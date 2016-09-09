@@ -5227,6 +5227,10 @@ ul.dots li:before {
 		color: #333;
 	}
 
+	#loginContainer div.links {
+		margin-right: 0;
+	}
+
 
 }
 
@@ -5390,8 +5394,8 @@ ul.dots li:before {
 		padding-left: 10px;
 	}
 
-	#loginContainer #login-area .links {
-		margin-right: 20px;
+	#loginContainer div.links {
+		margin-right: 5%;
 	}
 
 	#loginContainer #login-area #submit_fp_email {
@@ -5526,9 +5530,9 @@ ul.dots li:before {
 	}
 
 	/*Branchen*/ 
-	span.l2112select {
+	#branchensuche form span {
 		padding-right: 0;
-		width: 150px;
+		width: 220px;
 	}
 
 	/*Bundesländer*/
@@ -5540,7 +5544,7 @@ ul.dots li:before {
 	/*Suchbox*/
 
 	#q_search .s_input {
-		width: auto;
+		width: 50%;
 	}
 
 	/*Branchensuche*/
