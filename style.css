@@ -5095,6 +5095,10 @@ body.loading .modal {
 
 /* e-dialog customized */
 
+.mobile {
+	display: none;
+}
+
 #nav-mobile {
 	clear: right;
 	display: none;
@@ -5124,6 +5128,18 @@ body.loading .modal {
 /*Header Slider*/
 #home {
 	overflow-x: hidden;
+}
+
+/*Bullet lists*/
+
+ul.dots li { 
+    background: none;
+    padding: 0;
+}
+
+ul.dots li:before {
+    content: "•";
+    color: #0D4435;
 }
 
 /*media queries*/
@@ -5302,7 +5318,6 @@ body.loading .modal {
 		height: 200px;
 		overflow: hidden;
 		background: url('../images/slider-bg.jpg');
-		margin: -10px -6% 0 -6%;
 	}
 
 	#slideshow img {
@@ -5407,8 +5422,155 @@ body.loading .modal {
 		left: -15%;
 	}
 
-	/*******Columns******/
+}
 
-	column 
+/*Columns, Grids Settings*/
 
+
+@media only screen and (min-width: 0px) and (max-width: 1000px) {
+
+	.mobile {
+		display: block;
+	}
+	/*Disabled Feedback, Suche, Branche, Bundesländer */
+
+	#feedback, #suchbox, #branchensuche, #bundeslaender {
+		display: none;
+	}
+
+	/*Columns*/
+
+	.column, .column-box {
+		float: none;
+		display: block;
+	}
+
+	.column {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.column-box {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+
+	/*Details-Text*/
+	h3 a.more {
+		right: 12px;
+	}
+
+	/*Warum Infodienst-Box*/
+	#warum-infodienst .item14 {
+		padding: 0;
+	}
+
+	/*Referenzen*/
+
+	#referenzen div {
+		text-align: center;
+	}
+
+	#letzte-news h3 {
+		background: white;
+	}
+
+	/*Footer*/
+
+	#f-menu ul {
+		text-align: center;
+	}
+
+	#f-menu ul li {
+		font-size: 10px;
+		float: none;
+		display: inline-block;
+	}
+
+	#f-menu ul li:first-child {
+		display: none;
+	}
+	
+	#footer .row {
+		padding: 0 5%;
+		margin: 0;
+	}
+
+	#footer [class*="grid"] {
+    	display: block;
+    	float: none;
+    	width: 100%;
+    	margin: 0;
+	}
+
+	#footer [class*="grid"] > .row {
+		padding: 0;
+	}
+}
+
+
+@media only screen and (min-width: 620px) and (max-width: 999px) {
+
+	.mobile {
+		display: none;
+	}
+
+	.column {
+		float: left;
+		width: 50%;
+	}
+
+	#feedback, #suchbox, #branchensuche, #bundeslaender {
+		display: block;
+	}
+
+	/*Branchen*/ 
+	span.l2112select {
+		padding-right: 0;
+		width: 150px;
+	}
+
+	/*Bundesländer*/
+
+	#map #homeMap {
+		width: 100%;
+	}
+
+	/*Suchbox*/
+
+	#q_search .s_input {
+		width: auto;
+	}
+
+	/*Branchensuche*/
+
+	select.l2112select {
+		width: 220px;
+		position: static;
+		padding-right: 0px;
+
+	}
+
+	/*Aktuelle Ausschreibungen*/
+
+	#aktuelle-ausschreibungen h3.black {
+		display: block;
+	}
+
+	/*Footer*/
+	#footer .grid6 {
+    	float: left;
+    	width: 50%;
+	}
+
+
+}
+
+@media only screen and (min-width: 860px) and (max-width: 999px) {
+
+	.column {
+		float: left;
+		width: 33.33%;
+	}
 }
