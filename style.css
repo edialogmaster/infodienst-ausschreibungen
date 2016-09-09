@@ -1352,6 +1352,10 @@ table.t3 th div, table.t4 th div {
 	margin: 0 16px 0 0;
 }
 
+#f-menu ul li:last-of-type {
+	margin: 0;
+}
+
 #f-menu ul li a {
 	color: #FFF;
 	line-height: 30px;
@@ -5142,6 +5146,26 @@ ul.dots li:before {
     color: #0D4435;
 }
 
+/*******************************
+*************Kontakt************
+*******************************/
+	
+.contact-people ul {
+	list-style: none;
+	text-align: left;
+	vertical-align: top;
+
+}
+
+.contact-people li {
+	display: inline-table;
+	width: 30%;
+}
+
+.contact-people li p {
+	padding: 0;
+}
+
 /*media queries*/
 
 @media only screen and (max-width : 1000px) {
@@ -5367,6 +5391,15 @@ ul.dots li:before {
 	#slideshow img {
 		left: 20%;
 	}
+
+	/*******************************
+	*******Page About us************
+	*******************************/
+	#quote-box {
+		padding: 20px 5%;
+	}
+
+
 }
 
 
@@ -5424,6 +5457,33 @@ ul.dots li:before {
 	#slideshow img {
 		height: 250px;
 		left: -15%;
+	}
+
+	/*Footer*/
+
+	#f-menu ul li {
+		margin-right: 10px;
+	}
+
+
+	/*******************************
+	*******Page Service*************
+	*******************************/
+	
+	#service-tabs-nav {
+		margin-top: 0;
+	}
+
+	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
+		display: inline;
+	}
+
+	.service-tabs-content {
+		top: 1px;
+	}
+
+	.service-tabs-content .page-title, .page-title {
+		font-size: 20px;
 	}
 
 }
@@ -5527,11 +5587,14 @@ ul.dots li:before {
 		width: 100%;
 		text-align: left;
 		vertical-align: top;
+		padding: 0;
 	}
 
 	#content {
 		padding-left: 0;
 	}
+
+
 
 	/*Sidebar*/
 
@@ -5555,6 +5618,42 @@ ul.dots li:before {
 		width: 160px;
 	}
 
+	
+	/*******************************
+	*******Page Service*************
+	*******************************/
+
+	.service-tabs-content {
+		padding: 0 10px;
+	}
+
+	.service-tabs-content div.coll, .service-tabs-content div.colr {
+		float: none;
+		width: 100%;
+	}
+
+	.service-tabs-content div.colr {
+		margin-left: 0;
+	}
+
+	.service-tabs-content div.colr p, {
+		padding-left: 10px;
+	}
+
+	.service-tabs-content div.colr a.more-link {
+		padding-left: 19px;
+		background-position: 10px 2px;
+	}
+
+	#service-tabs-nav ul li {
+		margin-left: 0;
+	}
+
+	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
+		padding: 6px 5px 4px 5px;
+	}
+
+
 
 
 }
@@ -5569,6 +5668,10 @@ ul.dots li:before {
 
 	.sb_item_group .sb_item img {
 		display: none;
+	}
+
+	.sb_item h3 {
+		font-size: 14px;
 	}
 
 	.sb_item h3  {
@@ -5722,4 +5825,5 @@ ul.dots li:before {
 		width: 67%;
 		vertical-align: top;
 	}
+
 }
