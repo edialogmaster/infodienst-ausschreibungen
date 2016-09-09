@@ -5511,6 +5511,98 @@ ul.dots li:before {
 	#footer [class*="grid"] > .row {
 		padding: 0;
 	}
+
+	/*******************************
+	*******Page Registration********
+	*******************************/
+	
+	#primary {
+		text-align: center;
+	}
+
+	#sidebar, #content {
+		float: none;
+		display: inline-block;
+		margin: 0;
+		width: 100%;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	#content {
+		padding-left: 0;
+	}
+
+	/*Sidebar*/
+
+	#sidebar {
+		text-align: center;
+	}
+
+	#sidebar .column {
+		display: block;
+		width: 100%;
+	}
+
+	#sidebar .column > .sb_item, .sb_item_group {
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+	}
+
+	/*Content Formular*/
+	.input-large {
+		width: 160px;
+	}
+
+
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 619px) {
+
+	/*Sidebar*/
+
+	.sb_item {
+		padding-bottom: 0;
+	}
+
+	.sb_item_group .sb_item img {
+		display: none;
+	}
+
+	.sb_item h3  {
+		font-size: 14px;
+	}
+
+	.sb_item_group .sb_item h3 {
+		text-align: left;
+	}
+
+	.sb_item_group .sb_item h3:before { 
+    	content: "✔";
+    	padding-right: 5px;
+	}
+
+	.sb_item_group .sb_item h3 + p {
+		text-align: left;
+	}
+
+	/*Content Formular*/
+
+	.control-label {
+		float: none;
+		display: block;
+	}
+
+	.controls {
+		margin-left: 14px;
+	}
+
+	.controls span[class$="select"] {
+		width: 160px !important;
+	}
+
 }
 
 
@@ -5568,6 +5660,35 @@ ul.dots li:before {
     	width: 50%;
 	}
 
+	/*******************************
+	*******Page Registration********
+	*******************************/
+
+	#sidebar {
+		width: 25%;
+	}
+
+	#content {
+		width: 70%;
+	}
+
+	/*Sidebar*/
+
+	#sidebar .column > .sb_item, .sb_item_group {
+		width: 100%;
+	}
+
+	.sb_item h3 {
+		font-size: 18px;
+	}
+
+	/*Content Formular*/
+
+	.controls span[class$="select"] {
+		width: 160px !important;
+	}
+
+
 
 }
 
@@ -5576,5 +5697,29 @@ ul.dots li:before {
 	.column {
 		float: left;
 		width: 33.33%;
+	}
+
+	/*******************************
+	*******Page Registration********
+	*******************************/
+	
+	#primary {
+		text-align: center;
+	}
+
+	#sidebar, #content {
+		float: none;
+		display: inline-block;
+		margin: 0;
+	}
+
+	#sidebar {
+		width: 30%;
+	}
+
+	#content {
+		text-align: left;
+		width: 67%;
+		vertical-align: top;
 	}
 }
