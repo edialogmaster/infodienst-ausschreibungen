@@ -5256,6 +5256,80 @@ ul.dots li:before {
 	}
 
 
+	/**********************
+	*********PAGE ABO*******
+	***********************/
+
+	#abo {
+		margin: 0 10px;
+	}
+
+	#abo #primary {
+		text-align: left;
+		margin-top: 0;
+	}
+
+	#abos-preise {
+		margin-top: 20px;
+	}
+
+	#abos-preise {
+		overflow: visible;
+		background: none;
+	}
+
+	#abos-preise #table-container {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		height: auto;
+	}
+
+	#abos-preise #table-container tr, #abos-preise #table-container td {
+		display: block;
+	}
+	
+	#abos-preise #table-container [id*="col-"] .thead {
+		background: none;
+		background: #D60000;
+	}
+
+	.col-wrapp {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#abo #primary div.description {
+		width: 100%;
+		padding-bottom: 0;
+	}
+
+	#premium-services {
+		float: none;
+		position: static;
+		width: 70%;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+	#premium-services ul {
+		height: auto;
+	}
+
+	#premium-services a.btn-small input {
+		font-size: 17px;
+	}
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width : 860px) {
+	
+	#abos-preise #table-container td {
+		float: left;
+		width: 50%;
+	}
+
 }
 
 @media only screen and (max-width : 780px) {
@@ -5445,7 +5519,6 @@ ul.dots li:before {
 	#quote-box {
 		padding: 20px 5%;
 	}
-
 
 }
 
@@ -5710,6 +5783,7 @@ ul.dots li:before {
 		width: 100%;
 	}
 
+
 }
 
 @media only screen and (min-width: 0px) and (max-width: 619px) {
@@ -5759,6 +5833,7 @@ ul.dots li:before {
 	.controls span[class$="select"] {
 		width: 160px !important;
 	}
+
 
 }
 
@@ -5846,7 +5921,6 @@ ul.dots li:before {
 	}
 
 
-
 }
 
 @media only screen and (min-width: 860px) and (max-width: 999px) {
@@ -5879,5 +5953,30 @@ ul.dots li:before {
 		width: 67%;
 		vertical-align: top;
 	}
+
+	/**********************
+	*********PAGE ABO*******
+	***********************/
+
+	
+	#abos-preise #table-container {
+		width: 80%;
+		height: 600px;
+	}
+
+	#premium-services {
+		width: 17%;
+		margin: 150px 5px 0 5px;
+	}
+
+	#premium-services ul, #premium-services ul li {
+		width: 100%;
+	}
+
+	
+	#abos-preise .abo-details .abos-service-description {
+		padding-bottom: 50px;
+	}
+
 
 }
