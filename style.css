@@ -5364,6 +5364,53 @@ ul.dots li:before {
 		line-height: 120%;
 	}
 
+	/******************************
+	*******Search Results Table****
+	*******************************/
+
+	table#search-results-table {
+		margin-top: 50px;
+	}
+	
+	table#search-results-table, table#search-results-table thead, table#search-results-table tbody, table#search-results-table th, table#search-results-table td, table#search-results-table tr { 
+		display: block; 
+	}
+	
+	table#search-results-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	table#search-results-table tr { border-bottom: 1px solid #567c72; }
+	
+	table#search-results-table td { 
+		border: none;
+		position: relative;
+		padding-left: 35%; 
+	}
+
+	table#search-results-table td:first-of-type {
+		display: none;
+	}
+	
+	table#search-results-table td:before { 
+		position: absolute;
+		left: 10px;
+		width: 40%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*Table Head Replace*/
+	table#search-results-table td:nth-of-type(2):before { content: "Titel"; }
+	table#search-results-table td:nth-of-type(3):before { content: "Veröffentlicht"; }
+	table#search-results-table td:nth-of-type(4):before { content: "Anforderungsfrist"; }
+	table#search-results-table td:nth-of-type(5):before { content: "Angebotsfrist"; }
+	table#search-results-table td:nth-of-type(6):before { content: "Suchregion"; }
+
+	table#search-results-table td:before { font-weight: bold; }
+
 }
 
 
