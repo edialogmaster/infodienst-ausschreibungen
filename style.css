@@ -5097,7 +5097,11 @@ body.loading .modal {
     margin: 0px;
 }
 
-/* e-dialog customized */
+/********************************
+******e-dialog customized *******
+********************************/
+
+/*Navigation*/
 
 .mobile {
 	display: none;
@@ -5106,24 +5110,82 @@ body.loading .modal {
 #nav-mobile {
 	clear: right;
 	display: none;
-	font-size: 16px;
-	margin-top: 35px;
+	background: #d60000;
+	font-size: 20px;
+	color: white;
+}
+
+#nav-mobile ul {
+	list-style: none;
+	text-align: right;
+	margin: 0;
+	padding: 5px 10px;
+}
+
+#nav-mobile li {
+	vertical-align: top;
+	display: inline-block;
+	width: 100px;
+}
+
+#nav-mobile li a {
+	color: white;
 }
 
 #nav-mobile img {
-	width: 25px;
+	height: 25px;
 	position: relative;
-	top: 7px;
-	padding-right: 5px;
+	top: 5px;
+	margin-right: 10px;
+}
+
+#nav-mobile label:hover {
+	cursor: pointer;
+}
+
+#nav-mobile li ul {
+	position: absolute;
+	background: #d60000;
+	z-index: 9999;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+
+#nav-mobile li ul li {
+	width: 100%;
+	line-height: 3em;
+}
+
+
+#nav-mobile li ul li a {
+	display: block;
+}
+
+#nav-mobile li ul li.language-divider {
+	border-bottom: 1px white solid;
+}
+
+#nav-mobile li ul li.language-mobile img {
+	height: 15px;
+}
+
+#nav-mobile [type="checkbox"] {
+	  display: none;
+}
+
+#nav-mobile [type="checkbox"]:checked ~ ul {
+	display: block;
+
 }
 
 #first-nav {
 	float: right;
 }
 
-#first-nav-mobile {
-	display: none;
-}
+/*Login Area*/
 
 #login-fp-title {
 	margin-top: 9px;
@@ -5166,20 +5228,19 @@ ul.dots li:before {
 	padding: 0;
 }
 
-/*media queries*/
 
-@media only screen and (max-width : 1000px) {
+/*********************************
+***********MEDIA QUERIES**********
+*********************************/
+
+@media only screen and (min-width: 320px) and (max-width : 1000px) {
+	
 	.main {
-		width: 90%;
+		width: 100%;
 	}
 
-	#header {
-		background-image: url('../images/h-bg-w-mobile.png');
-		background-position: right 0;
-	}
-
-	#header #main div {
-		display: inline-block;
+	#header .main #nav-mobile {
+		display: none;
 	}
 
 	#logo, #logo a {
@@ -5187,13 +5248,13 @@ ul.dots li:before {
 	}
 
 	#logo {
-		width: 40%;
+		width: 30%;
 		height: auto;
-		margin-top: 10px;
+		margin: 10px 0 0 10px;
 	}
 
 	#logoContainer {
-		width: 70%;
+		width: 80%;
 	}
 
 	#logo img {
@@ -5201,421 +5262,38 @@ ul.dots li:before {
 	}
 
 	#main-menu {
-		width: 60%;
+		width: 68%;
 	}
 
 	#main-menu ul li a {
 		padding: 2px 4px;
 	}
 
-}
-
-@media only screen and (max-width : 918px) {
-	#main-menu ul li {
-		font-size: 12px;
-	}
-
-}
-
-
-@media only screen and (max-width : 860px) {
-	/* gesamtbreite */
-	#main-menu {
-		width: 65%;
-	}
-
-	#header {
-		background-size: 100%;
-	}
-
-	/* logo */
-	#logo {
-		display: block;
-		width: 33%;
-	}
-
-	#logoContainer {
-		width: 100%;
-	}
-	
-
-	#language-logout-bar {
-		border: 0;
-	}
-
-	#main-menu ul#first-nav {
-		padding-top: 30px;
-	}
-
-	#main-menu ul#first-nav li a {
-		color: #333;
-	}
-
-	#loginContainer div.links {
-		margin-right: 0;
-	}
-
-
-	/**********************
-	*********PAGE ABO*******
-	***********************/
-
-	#abo {
-		margin: 0 10px;
-	}
-
-	#abo #primary {
-		text-align: left;
-		margin-top: 0;
-	}
-
-	#abos-preise {
-		margin-top: 20px;
-	}
-
-	#abos-preise {
-		overflow: visible;
-		background: none;
-	}
-
-	#abos-preise #table-container {
-		width: 100%;
-		float: none;
-		margin: 0 auto;
-		height: auto;
-	}
-
-	#abos-preise #table-container tr, #abos-preise #table-container td {
-		display: block;
-	}
-	
-	#abos-preise #table-container [id*="col-"] .thead {
-		background: none;
-		background: #D60000;
-	}
-
-	.col-wrapp {
-		width: 70%;
-		margin: 0 auto;
-	}
-
-	#abo #primary div.description {
-		width: 100%;
-		padding-bottom: 0;
-	}
-
-	#premium-services {
-		float: none;
-		position: static;
-		width: 70%;
-		margin: 0 auto;
-		padding-top: 20px;
-	}
-
-	#premium-services ul {
-		height: auto;
-	}
-
-	#premium-services a.btn-small input {
-		font-size: 17px;
-	}
-
-
-}
-
-@media only screen and (min-width: 600px) and (max-width : 860px) {
-	
-	#abos-preise #table-container td {
-		float: left;
-		width: 50%;
-	}
-
-}
-
-@media only screen and (max-width : 780px) {
-
-	#language-logout-bar div.dropdown{
-		display: none;
-	}
-
-	#nav-mobile {
-		display: block;
-	}
-
-	#first-nav {
-		display: none;
-	}
-
-	#first-nav-mobile {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000000;
-	text-align: center;
-	padding-top: 0;
-	}
-
-
-	#main-menu ul#first-nav-mobile li {
-		line-height: 4em;
-		float: none;
-		background: rgba(216,10,10, 0.9);
-		/*rot: background: rgba(110,143,134, 0.9); */
-		border: 0;
-	}
-
-	#first-nav-mobile li:last-child {
-		padding-bottom: 1em;
-	}
-
-	#main-menu #first-nav-mobile li a {
-		color: white;
-		font-size: 1.5em;
-		display: block;
-	}
-
-	#nav-close {
-		text-align: right;
-	}
-
-	#nav-mobile img.icon {
-		width: 20px;
-		position: static;
-		padding: 0;
-	}
-
-	#first-nav-mobile li.language-handle {
-		background: #6e8f86;
-		font-size: 2em;
-	}
-
-	#first-nav-mobile li.language-divider {
-		padding: 0 3em;
-	}
-
-	.language-divider hr {
-		margin: 0;
-	}
-
-	/*Login Area*/
-	#login-area {
-		padding-left: 0;
-		width: 100%;
-		background-image: none;
-	}
-
-	#loginContainer #login-area .text {
-		margin-bottom: 5px;
-	}
-
-	/*Slider*/
-
-	#home {
-		overflow: visible;
-	}
-
-	#teaser {
-		height: 200px;
-		overflow: hidden;
-		background: url('../images/slider-bg.jpg');
-	}
-
-	#slideshow img {
-		height: 200px;
-		position: relative;
-		left: 40%;
-	}
-
-	#slideshow .text-container {
-		width: 80%;
-		left: 30px;
-	}
-
-	#slideshow h2 {
-		font-size: 24px;
-		line-height: 120%;
-	}
-
-	/******************************
-	*******Search Results Table****
-	*******************************/
-
-	table#search-results-table {
-		margin-top: 50px;
-	}
-	
-	table#search-results-table, table#search-results-table thead, table#search-results-table tbody, table#search-results-table th, table#search-results-table td, table#search-results-table tr { 
-		display: block; 
-	}
-	
-	table#search-results-table thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	table#search-results-table tr { border-bottom: 1px solid #567c72; }
-	
-	table#search-results-table td { 
-		border: none;
-		position: relative;
-		padding-left: 35%; 
-	}
-
-	table#search-results-table td:first-of-type {
-		display: none;
-	}
-	
-	table#search-results-table td:before { 
-		position: absolute;
-		left: 10px;
-		width: 40%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-	
-	/*Table Head Replace*/
-	table#search-results-table td:nth-of-type(2):before { content: "Titel"; }
-	table#search-results-table td:nth-of-type(3):before { content: "Veröffentlicht"; }
-	table#search-results-table td:nth-of-type(4):before { content: "Anforderungsfrist"; }
-	table#search-results-table td:nth-of-type(5):before { content: "Angebotsfrist"; }
-	table#search-results-table td:nth-of-type(6):before { content: "Suchregion"; }
-
-	table#search-results-table td:before { font-weight: bold; }
-
-}
-
-
-
-@media only screen and (max-width : 620px) {
-	#logo { width: 40%; }
-	#main-menu { width: 60%; }
-
-	#loginContainer #login-area .text {
-		width: 50%;
-	}
-
-
-	/*Slider*/
-
-	#h-slider .teaser-tabs {
-		display: none;
-	}
-
-	#slideshow .text-container {
-		width: 50%;
-		left: 30px;
-	}
-
-	#slideshow img {
-		left: 20%;
-	}
-
-	/*******************************
-	*******Page About us************
-	*******************************/
-	#quote-box {
-		padding: 20px 5%;
-	}
-
-}
-
-
-@media only screen and (max-width : 480px) {
-
-	.main {
-		width: 100%;
-	}
-
-	#logo {
-		width: 50%;
-		margin-left: 5%;
-	}
-
-	#main-menu { 
-		width: 40%;
-		margin-right: 5%; 
-	}
-
-	#nav-mobile {
-		margin-top: 30px;
-	}
-
-	#login-area {
-		padding-left: 10px;
-	}
-
-	#loginContainer div.links {
-		margin-right: 5%;
-	}
-
-	#loginContainer #login-area #submit_fp_email {
-		float: left;
-	}
-
-	/*Slider*/
-	
-	#teaser {
-		height: 250px;
-	}
-
-
-
-	#slideshow .text-container {
-		width: 20%;
-		left: 30px;
-		margin-left: 1em;
-	}
-
-	#slideshow h2 {
-		font-size: 18px;
-
-	}
-
-	#slideshow img {
-		height: 250px;
-		left: -15%;
-	}
-
-	/*Footer*/
-
-	#f-menu ul li {
-		margin-right: 10px;
-	}
-
-
-	/*******************************
-	*******Page Service*************
-	*******************************/
-	
-	#service-tabs-nav {
-		margin-top: 0;
-	}
-
-	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
-		display: inline;
-	}
-
-	.service-tabs-content {
-		top: 1px;
-	}
-
-	.service-tabs-content .page-title, .page-title {
-		font-size: 20px;
-	}
-
-}
-
-/*Columns, Grids Settings*/
-
-
-@media only screen and (min-width: 0px) and (max-width: 1000px) {
-
 	.mobile {
 		display: block;
 	}
+
+
+	/*Login*/
+	#loginContainer {
+		padding: 10px;
+	}
+
+	#login-area {
+		background-position: 0 30px;
+		padding-left: 30px;
+		width: 100%;
+	}
+
+	#loginContainer div.links {
+		margin: 0;
+	}
+
+	#loginContainer #login-area .links {
+		margin-right: 35px;
+	}
+
+
 	/*Disabled Feedback, Suche, Branche, Bundesländer */
 
 	#feedback, #suchbox, #branchensuche, #bundeslaender {
@@ -5786,7 +5464,244 @@ ul.dots li:before {
 
 }
 
-@media only screen and (min-width: 0px) and (max-width: 619px) {
+@media only screen and (min-width: 320px) and (max-width : 768px) {
+	/* gesamtbreite */
+	#main-menu {
+		width: 65%;
+	}
+
+	body {
+		font-size: 16px;
+	}
+
+	#header {
+		background-image: url('../images/h-bg-w-mobile.png');
+		background-position: left -10px;
+		background-size: 130%;
+	}
+
+	#language-logout-bar {
+		border: 0;
+	}
+
+	#header #nav-mobile {
+		display: block;
+	}
+
+	#main-menu ul#first-nav {
+		padding-top: 30px;
+	}
+
+	#main-menu ul#first-nav li a {
+		color: #333;
+	}
+
+	#nav-mobile {
+		display: block;
+	}
+
+	#first-nav {
+		display: none;
+	}
+
+	/*Login Area*/
+	
+	/*hide desktop login link*/
+	#loginContainer div.links:first-of-type {
+		display: none;
+	}
+
+	#login-area {
+		background-image: none;
+		padding-left: 0;
+	}
+
+	#login-fp-title {
+		font-size: 15px;
+	}
+
+	#loginContainer #login-area .text {
+		margin-bottom: 5px;
+	}
+
+	#loginContainer #login-area .links  {
+		margin-right: 0;
+		width: 40%;
+	}
+
+	#loginContainer #login-area .text, #login-fields #loginform input, #fp-fields form input {
+		display: block;
+		width: 80%;
+		height: 30px;
+		margin: 0 auto;
+	}
+
+	#loginContainer #login-area .submit, #loginContainer #login-area .submit-orange {
+		height: 40px;
+		font-size: 16px;
+		width: 70%;
+		padding: 10px;
+	}
+
+	#login-fp-title h6 {
+		font-size: 20px;
+		margin-left: 10%;
+		float: left;
+		width: 40%;
+	}
+
+	#loginContainer #login-area .links {
+		font-size: 14px;
+		margin-right: 10%;
+		line-height: 150%;
+		margin: 0 10% 30px 0;
+
+	}
+
+	/*Slider*/
+
+	#home {
+		overflow: visible;
+	}
+
+	#teaser {
+		height: 200px;
+		overflow: hidden;
+		background: url('../images/slider-bg.jpg');
+	}
+
+	#slideshow img {
+		height: 200px;
+		position: relative;
+		left: 40%;
+	}
+
+	#slideshow .text-container {
+		width: 80%;
+		left: 30px;
+	}
+
+	#slideshow h2 {
+		font-size: 24px;
+		line-height: 120%;
+	}
+
+
+	/**********************
+	*********PAGE ABO*******
+	***********************/
+
+	#abo {
+		margin: 0 10px;
+	}
+
+	#abo #primary {
+		text-align: left;
+		margin-top: 0;
+	}
+
+	#abos-preise {
+		margin-top: 20px;
+	}
+
+	#abos-preise {
+		overflow: visible;
+		background: none;
+	}
+
+	#abos-preise #table-container {
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		height: auto;
+	}
+
+	#abos-preise #table-container tr, #abos-preise #table-container td {
+		display: block;
+	}
+	
+	#abos-preise #table-container [id*="col-"] .thead {
+		background: none;
+		background: #D60000;
+	}
+
+	.col-wrapp {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#abo #primary div.description {
+		width: 100%;
+		padding-bottom: 0;
+	}
+
+	#premium-services {
+		float: none;
+		position: static;
+		width: 70%;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+	#premium-services ul {
+		height: auto;
+	}
+
+	#premium-services a.btn-small input {
+		font-size: 17px;
+	}
+
+	#language-logout-bar div.dropdown{
+		display: none;
+	}
+
+
+	/******************************
+	*******Search Results Table****
+	*******************************/
+
+	table#search-results-table {
+		margin-top: 50px;
+	}
+	
+	table#search-results-table, table#search-results-table thead, table#search-results-table tbody, table#search-results-table th, table#search-results-table td, table#search-results-table tr { 
+		display: block; 
+	}
+	
+	table#search-results-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	table#search-results-table tr { border-bottom: 1px solid #567c72; }
+	
+	table#search-results-table td { 
+		border: none;
+		position: relative;
+		padding-left: 35%; 
+	}
+
+	table#search-results-table td:first-of-type {
+		display: none;
+	}
+	
+	table#search-results-table td:before { 
+		position: absolute;
+		left: 10px;
+		width: 40%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*Table Head Replace*/
+	table#search-results-table td:nth-of-type(2):before { content: "Titel"; }
+	table#search-results-table td:nth-of-type(3):before { content: "Veröffentlicht"; }
+	table#search-results-table td:nth-of-type(4):before { content: "Anforderungsfrist"; }
+	table#search-results-table td:nth-of-type(5):before { content: "Angebotsfrist"; }
+	table#search-results-table td:nth-of-type(6):before { content: "Suchregion"; }
+
+	table#search-results-table td:before { font-weight: bold; }
 
 	/*Sidebar*/
 
@@ -5834,11 +5749,113 @@ ul.dots li:before {
 		width: 160px !important;
 	}
 
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	#logoContainer {
+		width: 100%;
+	}
+
+	/*Login Area*/
+
+	#loginContainer #login-area .text, #login-fields #loginform input, #fp-fields form input {
+		width: 60%;
+	}
+
+	#loginContainer #login-area .submit, #loginContainer #login-area .submit-orange {
+		width: 40%;
+
+	}
+
 
 }
 
+@media only screen and (min-width: 320px) and (max-width : 480px) {
+	#logo { width: 70%; }
+	#main-menu { width: 60%; }
 
-@media only screen and (min-width: 620px) and (max-width: 999px) {
+	#nav-mobile li img {
+		height: 20px;
+		top: 3px;
+	}
+
+
+	/*Slider*/
+
+	#h-slider .teaser-tabs {
+		display: none;
+	}
+
+	#slideshow .text-container {
+		width: 50%;
+		left: 30px;
+	}
+
+	#slideshow img {
+		left: 20%;
+	}
+
+	/*******************************
+	*******Page About us************
+	*******************************/
+	#quote-box {
+		padding: 20px 5%;
+	}
+
+	/*Slider*/
+	
+	#teaser {
+		height: 250px;
+	}
+
+
+
+	#slideshow .text-container {
+		width: 20%;
+		left: 30px;
+		margin-left: 1em;
+	}
+
+	#slideshow h2 {
+		font-size: 18px;
+
+	}
+
+	#slideshow img {
+		height: 250px;
+		left: -15%;
+	}
+
+	/*Footer*/
+
+	#f-menu ul li {
+		margin-right: 10px;
+	}
+
+
+	/*******************************
+	*******Page Service*************
+	*******************************/
+	
+	#service-tabs-nav {
+		margin-top: 0;
+	}
+
+	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
+		display: inline;
+	}
+
+	.service-tabs-content {
+		top: 1px;
+	}
+
+	.service-tabs-content .page-title, .page-title {
+		font-size: 20px;
+	}
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
 
 	.mobile {
 		display: none;
@@ -5851,12 +5868,6 @@ ul.dots li:before {
 
 	#feedback, #suchbox, #branchensuche, #bundeslaender {
 		display: block;
-	}
-
-	/*Branchen*/ 
-	#branchensuche form span {
-		padding-right: 0;
-		width: 220px;
 	}
 
 	/*Bundesländer*/
@@ -5873,11 +5884,16 @@ ul.dots li:before {
 
 	/*Branchensuche*/
 
-	select.l2112select {
+	#branchensuche select.l2112select {
 		width: 220px;
 		position: static;
 		padding-right: 0px;
 
+	}
+
+	/*Referenzen*/
+	#referenzen img {
+		width: 100%;
 	}
 
 	/*Aktuelle Ausschreibungen*/
@@ -5920,12 +5936,7 @@ ul.dots li:before {
 		width: 160px !important;
 	}
 
-
-}
-
-@media only screen and (min-width: 860px) and (max-width: 999px) {
-
-	.column {
+		.column {
 		float: left;
 		width: 33.33%;
 	}
