@@ -1035,7 +1035,26 @@ required:"Bitte geben Sie Ihre E-Mail-Adresse an.",email:"Bitte geben Sie eine g
 </div>
 <!-- End branch-selector fragment -->
                 
-            
+<!-- Start country-selector fragment -->
+<div class="column-box" id="laendersuche-mobile">
+  <h3>
+	Ausschreibungen nach Bundesländern
+  </h3>
+
+  <div class="item14">
+	
+	  <form action="http://test:ariadne@test.infodienst-ausschreibungen.de/quickSearch/searchByProfile/branchSelectForm" method="post" name="branchSelectForm" id="branchSelectForm" >
+		<select name="branchSelectorId" class="l2112select" onchange="if($(&#39;#branchSelectForm :selected&#39;).val() != 0) window.location.href=this.value;" id="branchSelectorId" >
+<option value="0">W&auml;hlen Sie ein Bundesland aus</option>
+<option value="/branch/abbruch_und_entkernung?token=86342d33d4e549b3873e3a6f86bc6c72" >DE1 Baden-W&uuml;rttemberg</option>
+<option value="/branch/architekten-_ingenieur-_und_planungsleistungen?token=86342d33d4e549b3873e3a6f86bc6c72" >DE2 Bayern</option>
+<option value="/branch/automatisierung_msr?token=86342d33d4e549b3873e3a6f86bc6c72" >DE3 Berlin</option>
+</select>
+	  </form>
+	
+  </div>
+</div>
+<!-- End country-selector fragment -->            
                 
                     
 <div class="column-box" id="bundeslaender">
@@ -1167,7 +1186,6 @@ required:"Bitte geben Sie Ihre E-Mail-Adresse an.",email:"Bitte geben Sie eine g
                 
                     <div class="column-box" id="aktuelle-ausschreibungen">
 	<h3 class="black gray-bg mb0">Aktuelle Ausschreibungen</h3>
-	<h3 class="mb0 mobile">Aktuelle Ausschreibungen</h3>
 	
 	<div class="item-stat gray-bg">
 		<table class="t1">

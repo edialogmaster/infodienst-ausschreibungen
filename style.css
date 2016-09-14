@@ -400,7 +400,7 @@ ul.dots {
 	font-family: Tahoma, sans-serif;
 	font-size: 15px;
 	color: #0d4435;
-	padding: 3px 5px 2px;
+	padding: 3px 14px 2px;
 }
 
 ul.dots li {
@@ -5103,10 +5103,6 @@ body.loading .modal {
 
 /*Navigation*/
 
-.mobile {
-	display: none;
-}
-
 #nav-mobile {
 	clear: right;
 	display: none;
@@ -5130,6 +5126,7 @@ body.loading .modal {
 
 #nav-mobile li a {
 	color: white;
+	text-decoration: none;
 }
 
 #nav-mobile img {
@@ -5196,17 +5193,11 @@ body.loading .modal {
 	overflow-x: hidden;
 }
 
-/*Bullet lists*/
-
-ul.dots li { 
-    background: none;
-    padding: 0;
+/*Deactivate Ländersuche-Mobile*/
+#laendersuche-mobile {
+	display: none;
 }
 
-ul.dots li:before {
-    content: "•";
-    color: #0D4435;
-}
 
 /*******************************
 *************Kontakt************
@@ -5269,11 +5260,6 @@ ul.dots li:before {
 		padding: 2px 4px;
 	}
 
-	.mobile {
-		display: block;
-	}
-
-
 	/*Login*/
 	#loginContainer {
 		padding: 10px;
@@ -5296,7 +5282,7 @@ ul.dots li:before {
 
 	/*Disabled Feedback, Suche, Branche, Bundesländer */
 
-	#feedback, #suchbox, #branchensuche, #bundeslaender {
+	#feedback, #bundeslaender {
 		display: none;
 	}
 
@@ -5474,6 +5460,24 @@ ul.dots li:before {
 		font-size: 16px;
 	}
 
+	.column-box {
+		margin-bottom: 30px;
+	}
+
+	h3, #home h3, #footer h3 {
+		font-size: 20px;
+		padding: 0 12px 0 12px;
+	}
+
+	h3 a.more {
+		font-size: 15px;
+	}
+
+	a {
+		color: #0D4435;
+		text-decoration: underline;
+	}
+
 	#header {
 		background-image: url('../images/h-bg-w-mobile.png');
 		background-position: left -10px;
@@ -5505,6 +5509,10 @@ ul.dots li:before {
 	}
 
 	/*Login Area*/
+
+	.input-middle {
+		padding-left: 0 !important;
+	}
 	
 	/*hide desktop login link*/
 	#loginContainer div.links:first-of-type {
@@ -5555,7 +5563,6 @@ ul.dots li:before {
 		margin-right: 10%;
 		line-height: 150%;
 		margin: 0 10% 30px 0;
-
 	}
 
 	/*Slider*/
@@ -5565,25 +5572,77 @@ ul.dots li:before {
 	}
 
 	#teaser {
-		height: 200px;
+		height: 250px;
 		overflow: hidden;
 		background: url('../images/slider-bg.jpg');
 	}
 
 	#slideshow img {
-		height: 200px;
+		height: 250px;
 		position: relative;
-		left: 40%;
 	}
 
 	#slideshow .text-container {
-		width: 80%;
 		left: 30px;
+		width: 35%;
 	}
 
 	#slideshow h2 {
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 120%;
+	}
+
+	#slideshow .caption {
+		font-size: 14px;
+	}
+
+	.teaser-tabs {
+		font-size: 12px;
+	}
+
+	/*Search Area*/
+	#suchbox input[type="text"] {
+		height: 30px;
+	}
+
+	#q_search fieldset {
+		background-position: 8px 8px;
+		background-size: 17px;
+	}
+
+	#q_search .s_input {
+		padding: 4px !important;
+		width: 60%;
+	}
+
+	#q_search #s_submit {
+		height: 38px;
+	}
+
+	/*Branchensuche*/
+
+	#branchensuche span.l2112select, #laendersuche-mobile span.l2112select {
+		line-height: 38px;
+	}
+
+	#branchensuche select.l2112select, #laendersuche-mobile select.l2112select {
+		height: 38px;
+		margin-bottom: 0;
+	}
+
+	#branchensuche form, #laendersuche-mobile form {
+		margin-bottom: 20px;
+	}
+
+	/*Active Ländersuche-mobile*/
+	#laendersuche-mobile {
+		display: block;
+	}
+
+	/*Footer*/
+
+	#footer h3 {
+		padding-left: 0;
 	}
 
 
@@ -5756,15 +5815,9 @@ ul.dots li:before {
 		width: 100%;
 	}
 
-	/*Login Area*/
 
-	#loginContainer #login-area .text, #login-fields #loginform input, #fp-fields form input {
-		width: 60%;
-	}
-
-	#loginContainer #login-area .submit, #loginContainer #login-area .submit-orange {
-		width: 40%;
-
+	.column {
+		width: 100%;
 	}
 
 
@@ -5785,51 +5838,45 @@ ul.dots li:before {
 	#h-slider .teaser-tabs {
 		display: none;
 	}
-
-	#slideshow .text-container {
-		width: 50%;
-		left: 30px;
-	}
-
-	#slideshow img {
-		left: 20%;
-	}
-
-	/*******************************
-	*******Page About us************
-	*******************************/
-	#quote-box {
-		padding: 20px 5%;
-	}
-
-	/*Slider*/
 	
 	#teaser {
 		height: 250px;
 	}
 
-
-
 	#slideshow .text-container {
 		width: 20%;
-		left: 30px;
-		margin-left: 1em;
+		left: 10px;
 	}
 
 	#slideshow h2 {
 		font-size: 18px;
+	}
 
+	#slideshow span.caption {
+		font-size: 12px;
 	}
 
 	#slideshow img {
 		height: 250px;
-		left: -15%;
+		left: -20%;
 	}
 
 	/*Footer*/
 
 	#f-menu ul li {
 		margin-right: 10px;
+	}
+	
+	#footer .grid3:not(:first-of-type) {
+		display: none;
+	}
+
+
+	/*******************************
+	*******Page About us************
+	*******************************/
+	#quote-box {
+		padding: 20px 5%;
 	}
 
 
@@ -5855,22 +5902,27 @@ ul.dots li:before {
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1000px) {
-
-	.mobile {
-		display: none;
-	}
+@media only screen and (min-width: 621px) and (max-width: 1000px) {
 
 	.column {
 		float: left;
-		width: 50%;
+		width: 49%;
 	}
 
-	#feedback, #suchbox, #branchensuche, #bundeslaender {
+	#home #teaser + .column {
+		margin-right: 2%;
+	}
+
+	#suchbox, #branchensuche, #bundeslaender {
 		display: block;
 	}
 
 	/*Bundesländer*/
+
+	/*deactivate mobile*/
+	#laendersuche-mobile {
+		display: none;
+	}
 
 	#map #homeMap {
 		width: 100%;
@@ -5891,21 +5943,26 @@ ul.dots li:before {
 
 	}
 
+
 	/*Referenzen*/
 	#referenzen img {
 		width: 100%;
 	}
 
-	/*Aktuelle Ausschreibungen*/
+	/*News deactive*/
 
-	#aktuelle-ausschreibungen h3.black {
-		display: block;
+	#letzte-news {
+		display: none;
 	}
 
 	/*Footer*/
 	#footer .grid6 {
     	float: left;
     	width: 50%;
+	}
+
+	#f-menu ul:first-of-type li a {
+		font-size: 14px;
 	}
 
 	/*******************************
@@ -5936,7 +5993,8 @@ ul.dots li:before {
 		width: 160px !important;
 	}
 
-		.column {
+	/*going back to this later*/
+	content .column {
 		float: left;
 		width: 33.33%;
 	}
@@ -5988,6 +6046,39 @@ ul.dots li:before {
 	#abos-preise .abo-details .abos-service-description {
 		padding-bottom: 50px;
 	}
+}
 
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+	#teaser, #slideshow img {
+		height: 300px;
+	}
+
+	#teaser {
+		margin-bottom: 30px;
+	}
+
+	/*Referenzen*/
+
+	#referenzen img {
+		width: auto;
+	}
+
+	/*Show News*/
+	#letzte-news {
+		display: block;
+	}
+
+	.column:last-of-type {
+		float: none;
+		clear: left;
+		width: 100%;
+	}
+
+	#footer .grid3:not(:first-of-type) {
+		display: inline-block;
+		width: 48%;
+		float: none;
+		vertical-align: top;
+	}
 
 }
