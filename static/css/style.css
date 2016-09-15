@@ -5886,6 +5886,27 @@ body.loading .modal {
 
 	table#search-results-table td:before { font-weight: bold; }
 
+
+	/*************************
+	******Page Branche********
+	**************************/
+
+	.branche h1, .branche h1 + p, .branche h1 + p + div {
+		margin: 10px;
+	}
+
+	select#max {
+		margin-right: 10px;
+	}
+
+	.branche table {
+		margin-top: 50px;
+	}
+
+	#foundMoreThan1 span {
+		display: block;
+	}
+	
 	/*************************
 	*******Page References****
 	**************************/
@@ -6087,6 +6108,23 @@ body.loading .modal {
 
 	.controls span[class$="select"] {
 		width: 160px !important;
+	}
+
+	/******************************
+	*******Search Results Table****
+	*******************************/
+
+	table#search-results-table {
+		font-size: 14px;
+	}
+
+	table#search-results-table td {
+		padding-left: 50%;
+		word-wrap: break-word;
+	}
+
+	#pagination {
+		margin-right: 10px;
 	}
 
 }
