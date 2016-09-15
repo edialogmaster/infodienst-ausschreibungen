@@ -4334,9 +4334,12 @@ th.headerSortDown {
 	margin-top: 33px;
 	color: #d60000;
 	border-bottom: 1px solid #B6C7C2;
-	padding-bottom: 10px;
+	padding: 0 0 10px 0;
 	margin-bottom: 10px;
+}
 
+.page-title {
+	padding-left: 10px;
 }
 
 .service-tabs-content .coll h2,
@@ -5883,9 +5886,40 @@ body.loading .modal {
 
 	table#search-results-table td:before { font-weight: bold; }
 
+	/*************************
+	*******Page References****
+	**************************/
+
+
+	table#results-table, table#results-table thead, table#results-table tbody, table#results-table th, table#results-table td, table#search-results-table tr { 
+		display: block; 
+	}
+	
+	#results-table td:first-child {
+		width: 100%;
+		padding: 0;
+	}
+
+	#results-table img {
+		display: block;
+		margin: 0 auto;
+	}
+
+
+	table#results-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+	
+	#logo {
+		width: 40%;
+	}
+
 	#logoContainer {
 		width: 100%;
 	}
