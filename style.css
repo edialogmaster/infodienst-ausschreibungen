@@ -5361,7 +5361,7 @@ body.loading .modal {
 	*******************************/
 	
 	#primary {
-		text-align: center;
+		padding: 0 10px;
 	}
 
 	#sidebar, #content {
@@ -5467,8 +5467,6 @@ body.loading .modal {
     div.colr a.more-link {
         margin-left: 10px;
     }
-
-
 
 
 	/******************
@@ -5752,6 +5750,11 @@ body.loading .modal {
 		margin: 0 10px;
 	}
 
+	/*Page Abo allgemein*/
+	#abo h1 { 
+		line-height: 100%;
+ 	}
+
 	#abo #primary {
 		text-align: left;
 		margin-top: 0;
@@ -5759,11 +5762,7 @@ body.loading .modal {
 
 	#abos-preise {
 		margin-top: 20px;
-	}
-
-	#abos-preise {
-		overflow: visible;
-		background: none;
+		line-height: 100%;
 	}
 
 	#abos-preise #table-container {
@@ -5771,6 +5770,11 @@ body.loading .modal {
 		float: none;
 		margin: 0 auto;
 		height: auto;
+	}
+
+	.thead span:first-child, #abo #abos-preise .thead p {
+		line-height: 150%;
+		margin: 10px;
 	}
 
 	#abos-preise #table-container tr, #abos-preise #table-container td {
@@ -5783,7 +5787,7 @@ body.loading .modal {
 	}
 
 	.col-wrapp {
-		width: 70%;
+		width: 90%;
 		margin: 0 auto;
 	}
 
@@ -5792,10 +5796,11 @@ body.loading .modal {
 		padding-bottom: 0;
 	}
 
+
 	#premium-services {
 		float: none;
 		position: static;
-		width: 70%;
+		width: 90%;
 		margin: 0 auto;
 		padding-top: 20px;
 	}
@@ -5804,12 +5809,21 @@ body.loading .modal {
 		height: auto;
 	}
 
+	#premium-services a.btn-small {
+		margin: 0 auto;
+		width: 70%;
+	}
+
 	#premium-services a.btn-small input {
 		font-size: 17px;
 	}
 
 	#language-logout-bar div.dropdown{
 		display: none;
+	}
+
+	.abo-details .abos-service-description+div, .abo-details span.amount+div {
+		margin: 10px 0;
 	}
 
 
@@ -5876,6 +5890,23 @@ body.loading .modal {
 		width: 50px;
 	}
 
+
+	/************************
+	*******Page Abo**********
+	************************/
+	
+	#abos-preise #table-container tr {
+		text-align: center;
+	}
+	
+	#abos-preise #table-container td {
+		display: inline-block;
+		width: 48%;
+	}
+
+	.col-wrap {
+		width: 100%;
+	}
 
 }
 
@@ -6108,30 +6139,6 @@ body.loading .modal {
 		width: 160px !important;
 	}
 
-
-	/**********************
-	*********PAGE Abo*******
-	***********************/
-
-	
-	#abos-preise #table-container {
-		width: 80%;
-		height: 600px;
-	}
-
-	#premium-services {
-		width: 17%;
-		margin: 150px 5px 0 5px;
-	}
-
-	#premium-services ul, #premium-services ul li {
-		width: 100%;
-	}
-
-	
-	#abos-preise .abo-details .abos-service-description {
-		padding-bottom: 50px;
-	}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
@@ -6165,6 +6172,30 @@ body.loading .modal {
 		width: 48%;
 		float: none;
 		vertical-align: top;
+	}
+
+	/**********************
+	*********PAGE Abo*******
+	***********************/
+
+	
+	#abos-preise #table-container {
+		width: 80%;
+		height: 600px;
+	}
+
+	#premium-services {
+		width: 17%;
+		margin: 150px 5px 0 5px;
+	}
+
+	#premium-services ul, #premium-services ul li {
+		width: 100%;
+	}
+
+	
+	#abos-preise .abo-details .abos-service-description {
+		padding-bottom: 50px;
 	}
 
 }
