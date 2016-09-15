@@ -5406,6 +5406,11 @@ body.loading .modal {
     	border-radius: 4px;
 	}
 
+	#sidebar h3 {
+		font-size: 16px;
+		line-height: 150%;
+	}
+
 	/*Content Formular*/
 
 	#salutation {
@@ -5695,6 +5700,27 @@ body.loading .modal {
 
     .service-tabs-content p {
     	line-height: 150%;
+    }
+
+	/**********************
+	******PAGE About us****
+	***********************/
+	
+	div.pattern {
+		text-align: center;
+	}
+
+	.pattern .img-container {
+		float: none;
+		display: inline-block;
+		width: 40%;
+		padding: 10px;
+		margin: 10px 0 0 0;
+		vertical-align: top;
+	}
+
+    .img-container p {
+    	line-height: 100%;
     }
 
 
