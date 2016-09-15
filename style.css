@@ -5826,6 +5826,15 @@ body.loading .modal {
 		margin: 10px 0;
 	}
 
+	/**********************
+	*******Impressum*******
+	***********************/
+
+	#content {
+		min-height: auto;
+	}
+
+	.impressum 
 
 	/******************************
 	*******Search Results Table****
