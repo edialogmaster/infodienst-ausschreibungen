@@ -5365,7 +5365,6 @@ body.loading .modal {
 	}
 
 	#sidebar, #content {
-		float: none;
 		display: inline-block;
 		margin: 0;
 		width: 100%;
@@ -5376,14 +5375,16 @@ body.loading .modal {
 
 	#content {
 		padding-left: 0;
+		float: right;
 	}
-
 
 
 	/*Sidebar*/
 
 	#sidebar {
+		float: none;
 		text-align: center;
+		line-height: 100%;
 	}
 
 	#sidebar .column {
@@ -5397,9 +5398,27 @@ body.loading .modal {
 		width: 48%;
 	}
 
+	#sidebar #email {
+		background: #628d89;
+		color: white !important;
+		text-decoration: none;
+    	padding: 10px; margin: 10px;
+    	border-radius: 4px;
+	}
+
 	/*Content Formular*/
+
+	#salutation {
+		margin-top: 20px;
+	}
+
 	.input-large {
 		width: 160px;
+	}
+
+	/*PLZ & Ort in one line*/
+	#regForm #param_post_code {
+		clear: left;
 	}
 
 	
@@ -5658,8 +5677,16 @@ body.loading .modal {
 		padding-left: 0;
 	}
 
+    /**********************
+	***PAGE Registration***
+	***********************/
+
+	#sidebar .sb_item:last-of-type {
+		padding-bottom: 0;
+	}
+
 	/**********************
-	******PAGE SERVICE*****
+	******PAGE Service*****
 	***********************/
 
     .grey {
@@ -5672,7 +5699,7 @@ body.loading .modal {
 
 
 	/**********************
-	*********PAGE ABO*******
+	*********PAGE Abo*******
 	***********************/
 
 	#abo {
@@ -5787,52 +5814,6 @@ body.loading .modal {
 
 	table#search-results-table td:before { font-weight: bold; }
 
-	/*Sidebar*/
-
-	.sb_item {
-		padding-bottom: 0;
-	}
-
-	.sb_item_group .sb_item img {
-		display: none;
-	}
-
-	.sb_item h3 {
-		font-size: 14px;
-	}
-
-	.sb_item h3  {
-		font-size: 14px;
-	}
-
-	.sb_item_group .sb_item h3 {
-		text-align: left;
-	}
-
-	.sb_item_group .sb_item h3:before { 
-    	content: "✔";
-    	padding-right: 5px;
-	}
-
-	.sb_item_group .sb_item h3 + p {
-		text-align: left;
-	}
-
-	/*Content Formular*/
-
-	.control-label {
-		float: none;
-		display: block;
-	}
-
-	.controls {
-		margin-left: 14px;
-	}
-
-	.controls span[class$="select"] {
-		width: 160px !important;
-	}
-
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -5843,6 +5824,10 @@ body.loading .modal {
 
 	.column {
 		width: 100%;
+	}
+
+	.sb_item_group .sb_item img {
+		width: 50px;
 	}
 
 
@@ -5940,6 +5925,48 @@ body.loading .modal {
 		background-color: #326154;
 		color: white;
 		text-decoration: none;
+	}
+
+		/*Sidebar*/
+
+	.sb_item {
+		padding-bottom: 0;
+	}
+
+	.sb_item_group .sb_item img {
+		display: none;
+	}
+
+	.sb_item h3 {
+		font-size: 14px;
+	}
+
+	.sb_item_group .sb_item h3 {
+		text-align: left;
+	}
+
+	.sb_item_group .sb_item h3:before { 
+    	content: "✔";
+    	padding-right: 5px;
+	}
+
+	.sb_item_group .sb_item h3 + p {
+		text-align: left;
+	}
+
+	/*Content Formular*/
+
+	.control-label {
+		float: none;
+		display: block;
+	}
+
+	.controls {
+		margin-left: 14px;
+	}
+
+	.controls span[class$="select"] {
+		width: 160px !important;
 	}
 
 }
@@ -6041,29 +6068,6 @@ body.loading .modal {
 		width: 33.33%;
 	}
 
-	/*******************************
-	*******Page Registration********
-	*******************************/
-	
-	#primary {
-		text-align: center;
-	}
-
-	#sidebar, #content {
-		float: none;
-		display: inline-block;
-		margin: 0;
-	}
-
-	#sidebar {
-		width: 30%;
-	}
-
-	#content {
-		text-align: left;
-		width: 67%;
-		vertical-align: top;
-	}
 
 	/**********************
 	*********PAGE ABO*******
