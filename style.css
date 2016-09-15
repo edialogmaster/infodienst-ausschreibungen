@@ -5691,6 +5691,26 @@ body.loading .modal {
 	}
 
 	/**********************
+	******PAGE Kontakt*****
+	***********************/
+
+	/*h2 einrücken bei Tablet & Mobile*/
+	.contact-people + h2 {
+		margin-left: 0;
+	}
+
+	.contact-people > ul {
+		padding-left: 0;
+	}
+
+	/*Table font-size für Tablet / Mobile größer machen*/
+
+	table.contact-data-table tr, table.contact-data-table td, table.contact-data-table th {
+		font-size: 14px !important;
+	}
+
+
+	/**********************
 	******PAGE Service*****
 	***********************/
 
@@ -6088,15 +6108,9 @@ body.loading .modal {
 		width: 160px !important;
 	}
 
-	/*going back to this later*/
-	content .column {
-		float: left;
-		width: 33.33%;
-	}
-
 
 	/**********************
-	*********PAGE ABO*******
+	*********PAGE Abo*******
 	***********************/
 
 	
