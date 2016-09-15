@@ -5341,7 +5341,7 @@ body.loading .modal {
 	}
 	
 	#footer .row {
-		padding: 0 5%;
+		padding: 0 10px;
 		margin: 0;
 	}
 
@@ -5424,10 +5424,6 @@ body.loading .modal {
 		padding-left: 10px;
 	}
 
-	.service-tabs-content div.colr a.more-link {
-		padding-left: 19px;
-		background-position: 10px 2px;
-	}
 
 	#service-tabs-nav ul li {
 		margin-left: 0;
@@ -5436,6 +5432,18 @@ body.loading .modal {
 	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
 		padding: 6px 5px 4px 5px;
 	}
+
+	div.colr h2 + p {
+    	background-color: #f8f9f9;
+    	padding: 10px;
+    	border: 1px solid #e9eef0;
+    	border-left: none; border-right: none;
+    }
+
+    div.colr a.more-link {
+        margin-left: 10px;
+    }
+
 
 
 
@@ -5458,6 +5466,7 @@ body.loading .modal {
 
 	body {
 		font-size: 16px;
+		line-height: 150%;
 	}
 
 	.column-box {
@@ -5467,6 +5476,10 @@ body.loading .modal {
 	h3, #home h3, #footer h3 {
 		font-size: 20px;
 		padding: 0 12px 0 12px;
+	}
+
+	section h4, .service-tabs-content h4 {
+		font-size: 18px;
 	}
 
 	h3 a.more {
@@ -5644,6 +5657,18 @@ body.loading .modal {
 	#footer h3 {
 		padding-left: 0;
 	}
+
+	/**********************
+	******PAGE SERVICE*****
+	***********************/
+
+    .grey {
+    	padding: 0 10px;
+    }
+
+    .service-tabs-content p {
+    	line-height: 150%;
+    }
 
 
 	/**********************
@@ -5871,6 +5896,12 @@ body.loading .modal {
 		display: none;
 	}
 
+	/*Sidebar*/
+
+	#sidebar .column-box {
+		margin: 0;
+	}
+
 
 	/*******************************
 	*******Page About us************
@@ -5884,20 +5915,31 @@ body.loading .modal {
 	*******Page Service*************
 	*******************************/
 	
-	#service-tabs-nav {
-		margin-top: 0;
+	#service-tabs-nav, .breadcrumbs  {
+		margin-top: 20px;
+		float: none;
+	}
+
+	#service-tabs-nav ul {
+		background-color: #E9EEF0;
+		text-align: center;
+	}
+
+	#service-tabs-nav ul li {
+		display: inline-block;
+		width: 32%;
+		float: none;
+		vertical-align: top;
 	}
 
 	#service-tabs-nav ul li a, #service-tabs-nav ul li.active a {
-		display: inline;
+		border: none;
 	}
 
-	.service-tabs-content {
-		top: 1px;
-	}
-
-	.service-tabs-content .page-title, .page-title {
-		font-size: 20px;
+	#service-tabs-nav ul li.active a {
+		background-color: #326154;
+		color: white;
+		text-decoration: none;
 	}
 
 }

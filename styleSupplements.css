@@ -1284,4 +1284,16 @@ div.tenderOverlay {
     
     }
     
+    .more-link {
+        background: url("../images/li-arrow-s.png") no-repeat left 6px;
+    }
+
+
+    .more-link:hover {
+        background: url("../images/li-arrow-s.png") no-repeat left -8px;
+    }
+
+    .sp-news .title, ul.dots {
+        font-size: 16px;
+    }
 }
