@@ -5781,6 +5781,7 @@ input[type="submit"] {
 	#abos-preise {
 		margin-top: 20px;
 		line-height: 100%;
+		background: none;
 	}
 
 	#abos-preise #table-container {
