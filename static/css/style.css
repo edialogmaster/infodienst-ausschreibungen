@@ -718,6 +718,10 @@ table.t3 th div, table.t4 th div {
 #loginContainer {
 	overflow: hidden;
 	text-align: left;
+	float: right;
+  	position: relative;
+	top: -10px;
+
 }
 
 #loginContainer #login-area .text {
@@ -5124,8 +5128,13 @@ body.loading .modal {
 #nav-mobile li {
 	vertical-align: top;
 	display: inline-block;
-	width: 100px;
+	margin-right: 1em;
 }
+
+#nav-mobile ul li:last-of-type {
+	margin-right: 0;
+}
+
 
 #nav-mobile li a {
 	color: white;
@@ -5222,6 +5231,11 @@ body.loading .modal {
 	padding: 0;
 }
 
+/*disables all ios styles*/
+input[type="submit"] {
+	-webkit-appearance: none;
+}
+
 
 /*********************************
 ***********MEDIA QUERIES**********
@@ -5268,20 +5282,9 @@ body.loading .modal {
 		padding: 10px;
 	}
 
-	#login-area {
-		background-position: 0 30px;
-		padding-left: 30px;
-		width: 100%;
-	}
-
 	#loginContainer div.links {
 		margin: 0;
 	}
-
-	#loginContainer #login-area .links {
-		margin-right: 35px;
-	}
-
 
 	/*Disabled Feedback, Suche, Branche, Bundesländer */
 
@@ -5494,6 +5497,11 @@ body.loading .modal {
 		line-height: 150%;
 	}
 
+	/*Form input to prevent iphone from zooming in and not out*/
+	input, select, textarea {
+    	font-size: 16px;
+	}
+
 	.column-box {
 		margin-bottom: 30px;
 	}
@@ -5557,9 +5565,15 @@ body.loading .modal {
 		display: none;
 	}
 
+	#loginContainer {
+		position: static;
+		float: none;
+	}
+
 	#login-area {
 		background-image: none;
 		padding-left: 0;
+		margin: 0 auto;
 	}
 
 	#login-fp-title {
@@ -5630,8 +5644,9 @@ body.loading .modal {
 		line-height: 120%;
 	}
 
-	#slideshow .caption {
+	#slideshow span.caption {
 		font-size: 14px;
+		line-height: 120%; /*makes the caption of sliders smaller*/
 	}
 
 	.teaser-tabs {
@@ -6103,12 +6118,13 @@ body.loading .modal {
 	}
 
 	.controls {
-		margin-left: 14px;
+		margin: 0 14px;
 	}
 
-	.controls span[class$="select"] {
-		width: 160px !important;
-	}
+	/*Registration form*/
+	#termsAndConditions {margin-left: 0;}
+	.controls .btn-green {display: block; margin: 0 auto;}
+
 
 	/******************************
 	*******Search Results Table****
@@ -6125,6 +6141,16 @@ body.loading .modal {
 
 	#pagination {
 		margin-right: 10px;
+	}
+
+
+	table#search-results-table td.title {
+		padding-left: 10px;
+		padding-top: 40px;
+	}
+
+	table#search-results-table td.title:before {
+		top: 10px;
 	}
 
 }
