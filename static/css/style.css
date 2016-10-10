@@ -5867,30 +5867,46 @@ input[type="submit"] {
 		display: block; 
 	}
 	
-	table#search-results-table thead tr { 
+	table#search-results-table thead { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 	
-	table#search-results-table tr { border-bottom: 1px solid #567c72; }
+	table#search-results-table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    table#search-results-table td:first-of-type {
+		display: none;
+	}
+
+	table#search-results-table tr {
+        border-top: 1px solid #567c72;
+	}
+
+	table#search-results-table tr:last-of-type {
+        border-bottom: 1px solid #567c72;
+	}
 	
 	table#search-results-table td { 
 		border: none;
-		position: relative;
-		padding-left: 35%; 
+		box-sizing: border-box;
+        float: left;
+        clear: left;
+        width: 100%;
+        text-align: right;
+        padding: 5px 10px;
 	}
 
-	table#search-results-table td:first-of-type {
-		display: none;
-	}
-	
 	table#search-results-table td:before { 
-		position: absolute;
-		left: 10px;
-		width: 40%; 
-		padding-right: 10px; 
-		white-space: nowrap;
+		content: attr(data-th);
+		text-align: left;
+        float: left;
+       	font-weight: bold;
+       	padding-right: 5px;
 	}
 	
 	/*Table Head Replace*/
@@ -5900,7 +5916,6 @@ input[type="submit"] {
 	table#search-results-table td:nth-of-type(5):before { content: "Angebotsfrist"; }
 	table#search-results-table td:nth-of-type(6):before { content: "Suchregion"; }
 
-	table#search-results-table td:before { font-weight: bold; }
 
 
 	/*************************
@@ -6136,7 +6151,6 @@ input[type="submit"] {
 	}
 
 	table#search-results-table td {
-		padding-left: 50%;
 		word-wrap: break-word;
 	}
 
@@ -6145,13 +6159,10 @@ input[type="submit"] {
 	}
 
 
-	table#search-results-table td.title {
-		padding-left: 10px;
-		padding-top: 40px;
-	}
-
-	table#search-results-table td.title:before {
-		top: 10px;
+	table#search-results-table td.title, table#search-results-table td.title:before {
+		display: block;
+		float: none;
+		text-align: left;
 	}
 
 }
